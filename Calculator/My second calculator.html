@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="center">
+	<h1 id="result"></h1>
+	<br style="display: block;margin: 3px;">
+</div>
+<div>
+<button id="btn1"value="1">1</button>
+<button id="btn1"value="2">2</button>
+<button id="btn1"value="3">3</button>
+<button id="add">+</button>
+<button id="sub">-</button>
+<br/>
+
+<button id="4"value="4">4</button>
+<button id="5"value="5">5</button>
+<button id="6"value="6">6</button>
+<button id="divd">/</button>
+<button id="mltp">*</button>
+<br/>
+
+<button id="7"value="7">7</button>
+<button id="8"value="8">8</button>
+<button id="9"value="9">9</button>
+<button id="0"value="0">0</button>
+</div>
+<button id="clear"onclick="document.getelementbyid('result').textcontent=''">C</button>
+<button style="width:30px"id='calc'>=</button>
+<button id="del"><=</button>
+<button id="roff">Fix</button>
+
+</body>
+<footer>
+	<script type="text/javascript">
+		document.queryselector('#btn1').addeventlistener('click',function add(event){event.preventDefault();document.getelementbyid('result').textcontent=document.getelementByid('result').textcontent="$(this.value)"});
+	</script>
+</footer>
+</html>

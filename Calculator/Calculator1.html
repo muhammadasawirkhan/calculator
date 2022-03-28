@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+Enter Number1:<input type='text' id='num1'/>
+<br/>
+Enter Number2:<input type='text' id='num2'/>
+<br/>
+Result:<input type='text' id='result'/>
+<br/>
+<button id="plus" onclick="add()">+</button>
+<button id="minus" onclick="subtract()">-</button>
+
+<script>
+class Addition{
+		constructor(num1,num2)
+		{
+			this.number1=num1;
+			this.number2=num2;
+		}
+		add()
+		{
+		return this.number1+this.number2;
+		}
+}
+class Subtraction{
+		constructor(num1,num2)
+		{
+			this.number1=num1;
+			this.number2=num2;
+		}
+		subtract()
+		{
+		return this.number1-this.number2;
+		}
+	
+}
+class Calculator{
+	constructor(num1,num2)
+	{
+		this.number1=num1;
+		this.number2=num2;
+	}
+	add1()
+	{
+		let c1=new Addition(this.number1,this.number2);
+		return c1.add();
+	}
+	subtract1()
+	{
+		let c1=new Subtraction(this.number1,this.number2);
+		return c1.subtract();
+	}
+	multiply()
+	{
+		return this.number1*this.number2;
+	}
+	divide()
+	{
+		return this.number1/this.number2;
+	}
+}
+
+//alert(option.textContent);
+var option;
+option=document.querySelector("#plus");
+function add()
+{
+		let c2;
+		var number1=Number(document.querySelector("#num1").value);
+		var number2=Number(document.querySelector("#num2").value);
+
+		var result=document.querySelector("#result");
+
+		c2=new Calculator(number1,number2);
+
+	result.value=c2.add1();
+
+}
+option=document.querySelector("#minus");
+
+function subtract()
+{
+		let c2;
+		var number1=Number(document.querySelector("#num1").value);
+		var number2=Number(document.querySelector("#num2").value);
+
+		var result=document.querySelector("#result");
+
+		c2=new Calculator(number1,number2);
+
+	result.value=c2.subtract1();
+
+}		
+/*
+option.addEventListener('click',
+	()=>{
+		let c1;
+		var number1=Number(document.querySelector("#num1").value);
+		var number2=Number(document.querySelector("#num2").value);
+
+		var result=document.querySelector("#result");
+
+		c1=new Calculator(number1,number2);
+
+	result.value=c1.add();
+}
+
+);
+*/
+</script>
+</body>
+</html>
